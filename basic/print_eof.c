@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main () {
-    printf("Hello Alec!\c\n");
+
+    printf("EOF: ");
+    putchar(EOF);
+
     return 0;
 }
