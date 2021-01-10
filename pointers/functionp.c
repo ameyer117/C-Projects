@@ -7,7 +7,8 @@ char tolowercase (char character) {
     return character + 32;
 }
 
-char* map(char* string, char (*mapFn)(char x)) {
+// Call free when done
+char* map(char* string, char (*mapFn)(char c)) {
     size_t len = strlen(string);
     char* mappedstring = malloc(len);
 
@@ -26,6 +27,8 @@ int main () {
     char* mapped = map(original, tolowercase);
 
     printf("%s\n", mapped);
+
+    free(mapped);
 
     return 0;
 }
