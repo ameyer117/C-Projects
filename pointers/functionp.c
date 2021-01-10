@@ -7,7 +7,7 @@ char tolowercase (char character) {
     return character + 32;
 }
 
-char* mathop(char* string, char (*mapFn)(char x)) {
+char* map(char* string, char (*mapFn)(char x)) {
     size_t len = strlen(string);
     char* mappedstring = malloc(len);
 
@@ -23,7 +23,7 @@ int main () {
 
     printf("%s\n", original);
 
-    char* mapped = mathop(original, tolowercase);
+    char* mapped = map(original, tolowercase);
 
     printf("%s\n", mapped);
 
