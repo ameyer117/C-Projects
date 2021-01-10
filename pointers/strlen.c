@@ -13,7 +13,11 @@ int main() {
 }
 
 size_t strlen2(char *string) {
-    size_t i;
-    for(i = 0; *string != '\0'; i++, string++) {}
-    return i;
+    char* p = string;
+
+    while(*p != '\0') {
+        p++;
+    }
+
+    return p - string;
 }
